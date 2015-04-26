@@ -1,0 +1,55 @@
+<md-toolbar layout="row">
+      <h1 class="md-toolbar-tools" layout-align-gt-sm="center">Gulp Angular</h1>
+</md-toolbar>
+    <div layout="column" flex>
+
+<div ng-controller="form2Controller as fm">
+  <form name="form" 
+     ng-submit="submitForm()"
+     novalidate>
+<!-- Email -->
+      <label name="email">Your email</label>
+       <input id="email_id"
+        type="email"
+        name="email"
+        ng-model="user.email"
+        placeholder="Email Address" 
+        required/>
+<!-- Min Max --><br>
+      <label>Special Name</label>
+       <input id="specialId"
+        type="text" 
+        name="special"
+        value="user.special"
+        ng-model="user.special"
+        ng-minlength=5 
+        ng-maxlength=20
+        placeholder="5 - 20 characters"/>
+<!-- Date --><br>
+      <label>Birthday</label>
+       <input id="birthday_id"
+        type="date" 
+        name="birthday"
+        ng-model="user.birthday"
+        ng-change="fm.calculateAge()"
+        date-validate/>
+<!-- Submit -->
+      <br>
+      <br>
+      <button type="submit" 
+       class="button radius">Submit</button>
+    </form>
+    <p>{{fm.speical}}</p>
+  </div>
+<!-- end form -->
+
+</div>
+<br>
+<a href="#/date-time/{{user.special}}/{{user.birthday}}">Hi {{fm.form.speical}}</a>
+<p>Take a picture of yourself? {{hasUserMedia}}</p>
+<h2 ng-if="hasUserMedia" class="celebrate ng-scope">Your browser supports a version of the camera api, success!</h2>
+<camera>
+  <camera-control-snapshot></camera-control-snapshot>
+</camera>
+<canvas id="canvas" class="camera" width="2" height="2"></canvas>
+

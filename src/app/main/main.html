@@ -1,0 +1,158 @@
+<div ng-controller="MainCtrl" 
+  layout="column" 
+  style="height:500px;">
+  <section layout="row" 
+    flex>
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" 
+      md-component-id="left" 
+      md-is-locked-open="$mdMedia('gt-md')">
+      <md-toolbar class="md-theme-indigo">
+
+<!-- LEFT NAV-->
+        <h1 class="md-toolbar-tools">Menu</h1>
+      </md-toolbar>
+      <md-content 
+        layout-padding 
+        ng-controller="LeftCtrl">
+        <md-button 
+          ng-click="close()" 
+          class="md-primary" 
+          hide-gt-md>
+          Close
+        </md-button>
+        <p hide-md 
+          show-gt-md> <!-- Left Content -->
+          <div ng-include="'components/navbar/navbar.html'"></div>
+        </p>
+      </md-content>
+    </md-sidenav>
+    <md-content 
+      flex 
+      layout-padding>
+
+<!-- Main content dive -->
+<div layout="column" 
+    layout-fill  
+    layout-align="top center">
+  <div class="container">
+
+<!-- main content -->
+<div class="center">
+    <h1>Gulp Angular</h1>
+    <p class="lead">
+      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
+      <form 
+          ng-model="role" >
+        <input 
+          ng-model="role"
+          type="radio" 
+          name="role" 
+          value="visitor" 
+          ng-change="updateRole('visitor')"
+          checked>
+          Visitor<br>
+        <input 
+          ng-model="role"
+          type="radio" 
+          name="role" 
+          value="member"
+          ng-change="updateRole('member')">
+          Member
+      </form> 
+    </p>
+    <p><a class="btn btn-lg btn-success" ng-href="#/form">Splendid!</a></p>
+  </div>
+
+</div>
+<!-- end main content -->
+
+  <hr><!-- End main content div -->
+
+  <div class="footer center">
+    <p>Check out my <a href="https://github.com/timofeysie">github</a></p>
+  </div>
+</div>
+
+        <div class="center">
+          <md-button 
+            ng-click="toggleLeft()"
+            class="md-primary" 
+            hide-gt-md>
+            Menu
+          </md-button>
+        </div>
+        <div class="center">
+          <md-button 
+            ng-click="toggleRight()"
+            class="md-primary">
+            Setup
+          </md-button>
+        </div>
+      </div>
+      <div flex></div>
+    </md-content>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+      <md-toolbar class="md-theme-light">
+        <h1 class="md-toolbar-tools">Setup</h1>
+      </md-toolbar>
+      <md-content ng-controller="RightCtrl" layout-padding>
+
+<!-- Right Content -->
+  <md-toolbar class="md-primary">
+  <md-content layout-padding>
+    <form name="projectForm">
+      <md-input-container>
+        <label>Description</label>
+        <input md-maxlength="30" 
+          required 
+          name="description" 
+          ng-model="project.description"
+          ng-disabled="getRole() != 'visitor'">
+        <div ng-messages="projectForm.description.$error">
+          <div ng-message="required">This is required.</div>
+          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <label>Name</label>
+        <input required 
+          name="clientName" 
+          ng-model="project.clientName"
+          ng-disabled="getRole() != 'visitor'">
+        <div ng-messages="projectForm.clientName.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+      <md-input-container>
+        <label>Number</label>
+        <input required 
+          type="number" 
+          step="any" 
+          name="rate" 
+          ng-model="project.rate" 
+          min="800" 
+          max="4999"
+          ng-disabled="getRole() != 'member'">
+        <div ng-messages="projectForm.rate.$error">
+          <div ng-message="required">This field is required.</div>
+          <div ng-message="min">Min</div>
+          <div ng-message="max">Max</div>
+        </div>
+      </md-input-container>
+    </form>
+  </md-content>
+</div>
+<!-- end Right Content -->
+        <md-button ng-click="close()" 
+          class="md-primary center">
+          Close
+        </md-button>
+      </md-content>
+    </md-sidenav>
+  </section>
+</div>
+
+<div class="center">
+  <br><hr>
+  <link-directive></link-directive>
+</div>

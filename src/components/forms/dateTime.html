@@ -1,0 +1,23 @@
+<div ng-controller="formController as fm">
+  <form name="form" 
+    ng-submit="submitForm()"
+    novalidate>
+<!-- Begin -->
+    <label>begin: 
+      <input type="text" 
+        ng-model="doc.begin" 
+        app-datetime 
+        required/></label>
+    <label>end: 
+      <input type="text" 
+        ng-model="doc.end" 
+        app-datetime 
+        required/></label>
+<!-- Submit -->
+    <br><br>
+    <button type="submit" 
+      class="button radius">
+      Submit</button>
+  </form>
+  <p>{{name}}</p>
+</div>
