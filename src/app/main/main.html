@@ -37,10 +37,10 @@
   <div class="container">
 
 <!-- main content -->
-<div class="center">
+<div class="center center-content">
     <h1>Gulp Angular</h1>
     <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
+      <img src="assets/images/yeoman.png" alt="I'm Guppie"><br>
       <form 
           ng-model="role" >
         <input 
@@ -60,17 +60,11 @@
           Member
       </form> 
     </p>
-    <p><a class="btn btn-lg btn-success" ng-href="#/form">Splendid!</a></p>
   </div>
 
 </div>
 <!-- end main content -->
 
-  <hr><!-- End main content div -->
-
-  <div class="footer center">
-    <p>Check out my <a href="https://github.com/timofeysie">github</a></p>
-  </div>
 </div>
 
         <div class="center">
@@ -109,8 +103,8 @@
           ng-model="project.description"
           ng-disabled="getRole() != 'visitor'">
         <div ng-messages="projectForm.description.$error">
-          <div ng-message="required">This is required.</div>
-          <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+          <div ng-message="required">required</div>
+          <div ng-message="md-maxlength">< 30 chars</div>
         </div>
       </md-input-container>
       <md-input-container>
@@ -120,7 +114,7 @@
           ng-model="project.clientName"
           ng-disabled="getRole() != 'visitor'">
         <div ng-messages="projectForm.clientName.$error">
-          <div ng-message="required">This is required.</div>
+          <div ng-message="required">required</div>
         </div>
       </md-input-container>
       <md-input-container>
@@ -134,7 +128,7 @@
           max="4999"
           ng-disabled="getRole() != 'member'">
         <div ng-messages="projectForm.rate.$error">
-          <div ng-message="required">This field is required.</div>
+          <div ng-message="required">required</div>
           <div ng-message="min">Min</div>
           <div ng-message="max">Max</div>
         </div>
@@ -154,5 +148,6 @@
 
 <div class="center">
   <br><hr>
-  <link-directive></link-directive>
+  <link-directive></link-directive> | 
+  <span>Check out my <a href="https://github.com/timofeysie">github</a></span>
 </div>

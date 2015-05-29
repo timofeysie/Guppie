@@ -1,12 +1,36 @@
-## Gulp Angular Seed
+## Guppy the Gulp Angular Seed
 
 ### Unit Tests
 
-Unit tests are kept separatemly from the code they are testing.
+Unit tests are kept separately from the code they are testing.
 So we use the karma-ng-html2js-preprocessor for deveopment.
 Extra setup information may be needed from here:
 https://github.com/karma-runner/karma-ng-html2js-preprocessor
 
+To start the web server:
+```
+$ gulp serve
+```
+
+To run the unit tests with Karma, use the node task:
+```
+$ gulp test
+```
+
+
+### End to End Tests
+
+These tests reside in the e2e directory.  They inclide separate .po.js files for each page under tests.  This is in accordance with the [Page Object Pattern] (https://docs.google.com/presentation/d/1B6manhG0zEXkC-H-tPo2vwU06JhL8w9-XCF9oehXzAQ)
+
+With the server running from the root directory, run:
+```
+$ cd app
+$ webdriver-manager start
+```
+Then, in a separate terminal, run:
+```
+$ protractor protractor.conf.js
+```
 
 ### Documentation
 
@@ -24,7 +48,7 @@ http://usejsdoc.org/about-configuring-jsdoc.html
 
 ### In the Beginning
 
-We used mainly defaults, and only included ng-resource for RESTful communication.
+This project was created with the Yeoman Gulp Angular seed.  We used mainly defaults, and only included ng-resource for RESTful communication.
 ```
 yo gulp-angular gulp-angular
 ```

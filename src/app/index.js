@@ -10,7 +10,7 @@ angular.module('gulpAngular', ['ngTouch',
   'gulpAngular.services'])
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/main', {
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
       })
@@ -20,8 +20,12 @@ angular.module('gulpAngular', ['ngTouch',
       .when('/date-time/:special/:birthday', {
         templateUrl: 'components/forms/birthday.html'
       })
+      .when('/about', {
+        templateUrl: 'components/about/about.html',
+        controller: 'AboutController'
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/main'
       });
   })
 ;

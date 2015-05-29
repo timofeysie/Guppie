@@ -7,7 +7,8 @@
   <form name="form" 
      ng-submit="submitForm()"
      novalidate>
-<!-- Email -->
+    <!-- Email -->
+    <md-input-container>
       <label name="email">Your email</label>
        <input id="email_id"
         type="email"
@@ -15,7 +16,13 @@
         ng-model="user.email"
         placeholder="Email Address" 
         required/>
-<!-- Min Max --><br>
+      <div ng-messages="projectForm.description.$error">
+        <div ng-message="required">This is required.</div>
+        <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+      </div>
+    </md-input-container>
+    <!-- Min Max -->
+    <md-input-container>
       <label>Special Name</label>
        <input id="specialId"
         type="text" 
@@ -25,7 +32,13 @@
         ng-minlength=5 
         ng-maxlength=20
         placeholder="5 - 20 characters"/>
-<!-- Date --><br>
+      <div ng-messages="projectForm.description.$error">
+        <div ng-message="required">This is required.</div>
+        <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+      </div>
+    </md-input-container>
+    <!-- Date -->
+    <md-input-container>
       <label>Birthday</label>
        <input id="birthday_id"
         type="date" 
@@ -33,6 +46,11 @@
         ng-model="user.birthday"
         ng-change="fm.calculateAge()"
         date-validate/>
+      <div ng-messages="projectForm.description.$error">
+        <div ng-message="required">This is required.</div>
+        <div ng-message="md-maxlength">The name has to be less than 30 characters long.</div>
+      </div>
+    </md-input-container>
 <!-- Submit -->
       <br>
       <br>
