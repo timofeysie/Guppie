@@ -3,10 +3,12 @@
   style="height:500px;">
   <section layout="row" 
     flex>
-    <md-sidenav class="md-sidenav-left md-whiteframe-z2" 
+    <md-sidenav 
+      class="md-sidenav-left md-whiteframe-z2" 
       md-component-id="left" 
       md-is-locked-open="$mdMedia('gt-md')">
-      <md-toolbar class="md-theme-indigo">
+      <md-toolbar 
+        class="md-theme-indigo">
 
 <!-- LEFT NAV-->
         <h1 class="md-toolbar-tools">Menu</h1>
@@ -36,37 +38,37 @@
     layout-align="top center">
   <div class="container">
 
-<!-- main content -->
-<div class="center center-content">
-    <h1>Gulp Angular</h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Guppie"><br>
-      <form 
-          ng-model="role" >
-        <input 
-          ng-model="role"
-          type="radio" 
-          name="role" 
-          value="visitor" 
-          ng-change="updateRole('visitor')"
-          checked>
-          Visitor<br>
-        <input 
-          ng-model="role"
-          type="radio" 
-          name="role" 
-          value="member"
-          ng-change="updateRole('member')">
-          Member
-      </form> 
-    </p>
-  </div>
+    <!-- main content -->
+    <div class="center center-content">
+        <h1>Gulp Angular</h1>
+        <p class="lead">
+          <img src="assets/images/yeoman.png" 
+            alt="I'm Guppie"><br>
+          <form class="center"
+              ng-model="role" >
+            <input 
+              ng-model="role"
+              type="radio" 
+              name="role" 
+              value="visitor" 
+              ng-change="updateRole('visitor')"
+              checked>
+              Visitor<br>
+            <input 
+              ng-model="role"
+              type="radio" 
+              name="role" 
+              value="member"
+              ng-change="updateRole('member')">
+              Member
+          </form> 
+        </p>
+      </div>
+
+    </div>
+    <!-- end main content -->
 
 </div>
-<!-- end main content -->
-
-</div>
-
         <div class="center">
           <md-button 
             ng-click="toggleLeft()"
@@ -92,7 +94,7 @@
       <md-content ng-controller="RightCtrl" layout-padding>
 
 <!-- Right Content -->
-  <md-toolbar class="md-primary">
+  <md-toolbar class="md-primary right-content">
   <md-content layout-padding>
     <form name="projectForm">
       <md-input-container>

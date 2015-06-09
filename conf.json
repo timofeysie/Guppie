@@ -1,0 +1,29 @@
+{
+    "tags": {
+        "allowUnknownTags": true
+    },
+    "source": {
+        "include": [ "./"],
+        "exclude": [ "bower_components", "node_modules" ],
+        "includePattern": ".+\\.js(doc)?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "plugins": [],
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false,
+        "default": {
+            "outputSourceFiles": true
+        }
+    },
+    "opts": {
+        "template": "templates/default",  // same as -t templates/default
+        "encoding": "utf8",               // same as -e utf8
+        "destination": "./out/",          // same as -d ./out/
+        "recurse": true,                  // same as -r
+        "tutorials": "path/to/tutorials", // same as -u path/to/tutorials
+        "configure": "conf.json",
+        "readme": "./docs/INTRO.md"
+    }
+    // jsdoc -c conf.json --readme ./docs/INTRO.md  -d docs -r
+}
