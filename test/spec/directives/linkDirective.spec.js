@@ -11,6 +11,6 @@ describe('linkDirective', function() {
     var template ='<a href="http://google.com">Click me to go to Google</a>';
     element = $compile(template)($rootScope);
     $rootScope.$digest();
-    expect(element.html()).toContain('Click me to go to Google');
+    expect(element.html()).toContain('Click me to search');
     });
 });
