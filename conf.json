@@ -17,13 +17,14 @@
         }
     },
     "opts": {
-        "template": "templates/default",  // same as -t templates/default
+        //"template": "templates/default",  // same as -t templates/default
+        "template": "node_modules/angular-jsdoc/template", // use ng-jsdoc template
         "encoding": "utf8",               // same as -e utf8
-        "destination": "./out/",          // same as -d ./out/
+        "destination": "./docs/",         // same as -d Output directory
         "recurse": true,                  // same as -r
-        "tutorials": "path/to/tutorials", // same as -u path/to/tutorials
-        "configure": "conf.json",
-        "readme": "./docs/INTRO.md"
+        //"tutorials": "path/to/tutorials", // same as -u path/to/tutorials
+        "configure": "conf.json"
+        //"readme": "INTRO.md"
     }
     // jsdoc -c conf.json --readme ./docs/INTRO.md  -d docs -r
 }

@@ -2,7 +2,6 @@
 
 var paths = require('./.yo-rc.json')['generator-gulp-angular'].props.paths;
 
-// An example configuration file.
 exports.config = {
   framework: "jasmine",
   // The address of a running selenium server.

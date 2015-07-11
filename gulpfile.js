@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var _ = require('lodash');
 var wrench = require('wrench');
+var shell = require('gulp-shell'); 
 
 var options = {
   src: 'src',
@@ -27,3 +28,8 @@ wrench.readdirSyncRecursive('./gulp').filter(function(file) {
 gulp.task('default', ['clean'], function () {
     gulp.start('build');
 });
+
+gulp.task('docs', shell.task([ 
+ 'node_modules/jsdoc/jsdoc.js '+ 
+   '-c conf.json '
+]));

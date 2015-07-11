@@ -8,9 +8,9 @@ describe('linkDirective', function() {
   }));
   it('Replaces the element with the appropriate content', 
     function() {
-    var template ='<a href="http://google.com">Click me to go to Google</a>';
-    element = $compile(template)($rootScope);
-    $rootScope.$digest();
-    expect(element.html()).toContain('Click me to search');
+      var template ='<link-directive></link-directive> ';
+      element = $compile(template)($rootScope);
+      $rootScope.$digest();
+      expect(element.html()).toContain('Search');
     });
 });

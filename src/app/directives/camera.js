@@ -1,5 +1,15 @@
 'use strict';
-
+/**
+ * @fileOverview fileoverview
+ * description after fileoverview
+ * @class camera
+ * @ngdoc directive
+ * @name camera
+  * @preturns {Object} return what
+  * @param {Object} scope 
+  * @param {Element} JQueryor JQuery lite element
+  * @param {Array} attrs introspection would be nice
+ */
 angular.module('gulpAngular.directives')
 .directive('camera', function(CameraService) {
   return {

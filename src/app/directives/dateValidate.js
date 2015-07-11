@@ -1,22 +1,39 @@
 'use strict';
 /**
- * @fileOverview Date validation directive for Smart Forms.
- * @memberOf crownpermits.directives
- * [description] Directive to parse the date to override the custom date validation which
+ * @fileOverview Date validation for forms.
+ * Directive to parse the date to override the custom date validation which
  * could be set to a specific locale.  In Chrome the date chooser forces the
  * date into a yyyy/mm/dd format.  So we create a date based on the value
  * passed in and if it is not rejected as invalide, then our validation will pass.
  * Also, we reuqire that there should be three values, ie: day, month, and year.
- * @author Timothy Curchod
- * @memberOf crownpermits.directives
- * @param  {[type]} ) {	return     {		require: 'ngModel',		link: function (scope, elm, attrs, ctrl) {			var validator [description]
- * @return {[type]}   [description]
+ * @memberOf gulpAngular.directives
+ * @class dateValidate
+ * @ngdoc directive
+ * @name dateValidate
+  * @preturns {Object} link function
+  * @param {Object} scope does not create new scope. i.e., the default is scope: false" which uses the parent scope.
+  * @param {Element} JQueryor JQuery lite element
+  * @param {Array} attrs introspection would be nice
+  * @param {Function} controller description or name?
+  * @example Usage:
+<input 	id="birthday_id"
+	type="date" 
+	name="birthday"
+	ng-model="user.birthday"
+	ng-change="fm.calculateAge()"
+	date-validate/>
  */
 angular.module('gulpAngular.directives')
 .directive('dateValidate', function () {
 	return {
 		require: 'ngModel',
 		restrict: 'A',
+		/**
+		* @attr {Object} scope is scope
+		* @attr {Object} elem is element
+		* @attr {Object} attrs are attributes
+		* @attr {Object} ctrl is controller
+		*/
 		link: function (scope, elm, attrs, ctrl) {
 			var validator = function (value) {
 				var date = new Date(value);

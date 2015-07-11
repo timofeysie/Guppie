@@ -1,16 +1,16 @@
 ## Guppy the Gulp Angular Seed
 
+To start the web server:
+```
+$ gulp serve
+```
+
 ### Unit Tests
 
 Unit tests are kept separately from the code they are testing.
 So we use the karma-ng-html2js-preprocessor for deveopment.
 Extra setup information may be needed from here:
 https://github.com/karma-runner/karma-ng-html2js-preprocessor
-
-To start the web server:
-```
-$ gulp serve
-```
 
 To run the unit tests with Karma, use the node task:
 ```
@@ -24,7 +24,6 @@ These tests reside in the e2e directory.  They inclide separate .po.js files for
 
 With the server running from the root directory, run:
 ```
-$ cd app
 $ webdriver-manager start
 ```
 Then, in a separate terminal, run:
