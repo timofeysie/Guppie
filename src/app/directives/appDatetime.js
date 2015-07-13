@@ -1,11 +1,27 @@
 'use strict';
-angular.module('gulpAngular.controllers')
+/**
+ * @description Date and time utility
+ * @class appDatetime
+ * @memberOf gulpAngular.directives
+ */
+angular.module('gulpAngular.directives')
 .directive('appDatetime', function ($window) {
     return {
         restrict: 'A',
         require: 'ngModel',
+        /**
+         * @memberof gulpAngular.directives.appDatetime
+         * @param {scope} scope the parent scope
+         * @param {ele} ele html element
+         * @param {attrs} ele html element
+         * @param {controller} cameraCtrl the camera controller
+         */
         link: function (scope, element, attrs, ngModel) {
-
+            /**
+            * @memberof gulpAngular.directives.appDatetime
+            * @param {var} value the current time in milliseconds
+            * @returns {var} the current time
+            */
             function parser(value) {
                 var m = moment(value);
                 var valid = m.isValid();

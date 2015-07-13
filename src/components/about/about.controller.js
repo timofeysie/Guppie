@@ -1,5 +1,9 @@
 'use strict';
-
+/**
+  * @function AboutController
+  * @memberOf gulpAngular
+  * @description This is an angularjs controller for the about page.
+  */
 angular.module('gulpAngular')
   .controller('AboutController', ['$scope', 
     '$mdSidenav', 

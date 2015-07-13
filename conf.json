@@ -23,8 +23,8 @@
         "destination": "./docs/",         // same as -d Output directory
         "recurse": true,                  // same as -r
         //"tutorials": "path/to/tutorials", // same as -u path/to/tutorials
-        "configure": "conf.json"
-        //"readme": "INTRO.md"
+        "configure": "conf.json",
+        "readme": "INTRO.md"
     }
     // jsdoc -c conf.json --readme ./docs/INTRO.md  -d docs -r
 }

@@ -1,11 +1,11 @@
 'use strict';
 /**
- * @fileOverview fileoverview
- * description after fileoverview
+ * @description Creates the camera view and controls the snapshot ability.
  * @class camera
  * @ngdoc directive
  * @name camera
-  * @preturns {Object} return what
+ * @memberOf gulpAngular.directives
+  * @returns {Object} return what
   * @param {Object} scope 
   * @param {Element} JQueryor JQuery lite element
   * @param {Array} attrs introspection would be nice

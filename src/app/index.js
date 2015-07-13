@@ -1,5 +1,7 @@
 'use strict';
-
+/** 
+* @class gulpAngular  
+  */
 angular.module('gulpAngular', ['ngTouch', 
   'ngResource', 
   'ngRoute', 
@@ -27,10 +29,15 @@ angular.module('gulpAngular', ['ngTouch',
       .otherwise({
         redirectTo: '/main'
       });
-  })
-;
+  });
+/* @memberOf gulpAngular
+* @class gulpAngular.directives */
 angular.module('gulpAngular.directives', []);
+/* @memberOf gulpAngular
+* @class gulpAngular.controllers */
 angular.module('gulpAngular.controllers', []);
+/* @memberOf gulpAngular
+* @class gulpAngular.services */
 angular.module('gulpAngular.services', []);
 angular.module('gulpAngular').run(
   function ($rootScope, $location, $http, $timeout, userInfo) {

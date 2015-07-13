@@ -1,4 +1,9 @@
 'use strict';
+ /**
+  * @function CameraService
+  * @memberOf gulpAngular.services
+  * @description This is an angularjs service to get the user media information.
+  */
 angular.module('gulpAngular.services')
 .factory('CameraService', function($window) {
 	console.log('camera service called');

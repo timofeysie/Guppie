@@ -1,12 +1,12 @@
 'use strict';
-/**
-* @fileOverview The main controller takes care of actions for
+
+ /**
+  * @function MainCtrl
+  * @memberOf gulpAngular
+  * @description The main controller takes care of actions for
 * the Material Design app actions such as left and right panel
 * navigation and the shout outs list.
-* @author Timothy Curchod
-* @version: 0.1
-* @memberOf main
-*/ 
+  */
 angular.module('gulpAngular')
   .controller('MainCtrl', ['$scope', 
     '$mdSidenav', 
@@ -17,6 +17,13 @@ angular.module('gulpAngular')
     $scope.role = 'visitor';
     userInfo.setRole($scope.role);
     //var vm = this;
+
+  /**
+  * @name $scope.aScopeFunction
+  * @function function of what?
+  * @memberOf angular_module.MyModule.MyController
+  * @description set the role of the userInfo object
+  */
     $scope.updateRole = function () {
       //console.log('Role: '+$scope.role);
       userInfo.setRole($scope.role);
