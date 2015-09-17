@@ -9,7 +9,8 @@ angular.module('gulpAngular', ['ngTouch',
   'ngMaterial',
   'gulpAngular.directives',
   'gulpAngular.controllers',
-  'gulpAngular.services'])
+  'gulpAngular.services',
+  'blndspt.ngPerformance'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/main', {
