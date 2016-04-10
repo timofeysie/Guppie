@@ -1,12 +1,17 @@
 <div class="placement box-size">
-    <div class="stars">{{thing.stars}}</div><!-- No Spaces   
-     --><div class="rank">{{thing.rank}}</div>
-    <img ng-src="assets/images/{{thing.logo}}" alt="{{thing.title}}">
+  <div class="top-row">
+    <span class="stars">{{thing.stars}}</span>
+    <span class="rank">{{thing.rank}}</span>
+  </div>
+  <div class="main-content">
+    <div class="image"><img ng-src="assets/images/{{thing.logo}}" alt="{{thing.title}}"> &nbsp;</div>
     <div class="caption">
       <h3 class="title">{{thing.title}}</h3>
       <p class="description">{{thing.description}}</p>
       <p class="link"><a ng-href="{{thing.url}}">{{thing.url}}</a></p>
+      <!-- <p class="secondStars">{{thing.stars}}</p> -->
     </div>
+  </div>
     <button class="clicker"
     	type="button">Click Me!</button>
 </div>

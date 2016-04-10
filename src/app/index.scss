@@ -133,28 +133,36 @@ section {
   padding-right: 30px;
   overflow: auto;
   position: relative; 
-  .stars {
-    float: left;
-  }
-  .rank {
-    float: right;
-  }
-  img {
-    min-height: 100px;
-  }
-  .caption {
-    .title {
-      color: tomato;
+  .top-row {
+    clear: both;
+    .stars {
+      float: left;
     }
-    .description {
-      color: green;
+    .rank {
+      float: right;
     }
-    .link {
-      color: aquamarine;
+  }
+  .main-contant {
+    .image {
+      margin-top: 30px;
+      min-height: 100px;
+      float: left;
+    }
+    .caption {
+      position: absolute;
+      bottom: 50px;
+      .title {
+        color: tomato;
+      }
+      .description {
+        color: green;
+      }
+      .link {
+        color: aquamarine;
+      }
     }
   }
   .clicker {
-    margin-top: -355px;
     margin-top: -355px;
     width: 150px;
     position: absolute;
