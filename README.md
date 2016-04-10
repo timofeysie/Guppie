@@ -1,5 +1,8 @@
 ## Guppy the Gulp Angular Seed
 
+This project uses Material Design with forms.
+It currently uses Angular 1.3.
+
 To start the web server:
 ```
 $ gulp serve

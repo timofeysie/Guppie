@@ -114,3 +114,84 @@ https://github.com/google/material-design-icons
   background: transparent url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0IDI0IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGcgaWQ9IkhlYWRlciI+CiAgICA8Zz4KICAgICAgICA8cmVjdCB4PSItNjE4IiB5PSItMjIzMiIgZmlsbD0ibm9uZSIgd2lkdGg9IjE0MDAiIGhlaWdodD0iMzYwMCIvPgogICAgPC9nPgo8L2c+CjxnIGlkPSJMYWJlbCI+CjwvZz4KPGcgaWQ9Ikljb24iPgogICAgPGc+CiAgICAgICAgPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CiAgICAgICAgPHBhdGggZD0iTTMsMThoMTh2LTJIM1YxOHogTTMsMTNoMTh2LTJIM1YxM3ogTTMsNnYyaDE4VjZIM3oiIHN0eWxlPSJmaWxsOiNmM2YzZjM7Ii8+CiAgICA8L2c+CjwvZz4KPGcgaWQ9IkdyaWQiIGRpc3BsYXk9Im5vbmUiPgogICAgPGcgZGlzcGxheT0iaW5saW5lIj4KICAgIDwvZz4KPC9nPgo8L3N2Zz4=) 
   no-repeat  center center;
 }
+section {
+  padding-left: 20px;
+}
+
+.box-size {
+  width: 219px;
+  height: 355px;
+  min-width: 219px;
+  min-height: 355px;
+  display: inline-block;
+  padding: 15px;
+}
+
+.placement {
+  border: 1px solid gray;
+  padding-left: 30px;
+  padding-right: 30px;
+  overflow: auto;
+  position: relative; 
+  .stars {
+    float: left;
+  }
+  .rank {
+    float: right;
+  }
+  img {
+    min-height: 100px;
+  }
+  .caption {
+    .title {
+      color: tomato;
+    }
+    .description {
+      color: green;
+    }
+    .link {
+      color: aquamarine;
+    }
+  }
+  .clicker {
+    margin-top: -355px;
+    margin-top: -355px;
+    width: 150px;
+    position: absolute;
+    bottom: 10px;
+  }
+}
+
+.container1 {
+  img {
+    transform: rotate(90deg);
+  }
+}
+
+.container2 {
+  .box-size .placement {
+    box-sizing: border-box;
+  }
+  .box-size {
+    width: 100%;
+    float: none;
+  }
+  .placement {
+    border: none;
+    content: "";
+    clear: both;
+    display: inline-block;
+    .stars {
+      float: right;
+    }
+    img {
+      float: left;
+    }
+    .caption {
+      float: right;
+    }
+  }
+}
+
+.clearfix { overflow: auto; }
+

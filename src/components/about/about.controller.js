@@ -4,7 +4,7 @@
   * @memberOf gulpAngular
   * @description This is an angularjs controller for the about page.
   */
-angular.module('gulpAngular')
+angular.module('gulpAngular.controllers')
   .controller('AboutController', ['$scope', 
     '$mdSidenav', 
     '$timeout',

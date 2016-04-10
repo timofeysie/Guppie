@@ -1,0 +1,96 @@
+
+<section>
+<div class="container1">
+  <h2>We recommend ...</h2>
+  <div class="row">
+    <div class="col-xs-4" 
+      ng-repeat="thing in things | orderBy:'rank'">
+      <layout-directive />
+    </div>
+  </div>
+</div>
+</section>
+<section>
+<div class="container2">
+  <h2>You might also like ...</h2>
+  <div class="row">
+    <div class="col-sm-6">
+      <layout-directive />
+    </div>
+  </div>
+</section>
+<!-- Failed four styles layout -->
+<!-- <div class="container wrapper">
+  <div id="top">
+    <h1>Welcome to My Homepage</h1>
+  <p>Use the menu to select different Stylesheets</p>
+  </div>
+  <div class="wrapper">
+    <div id="menubar">
+    <ul id="menulist">
+    <li class="menuitem" ng-click="reStyle(0)">Stylesheet 1
+    <li class="menuitem" ng-click="reStyle(1)">Stylesheet 2
+    <li class="menuitem" ng-click="reStyle(2)">Stylesheet 3
+    <li class="menuitem" ng-click="reStyle(3)">Stylesheet 4
+    <li class="menuitem" ng-click="noStyles()">No Stylesheet
+    </ul>
+    </div>
+    <div id="main">
+      <h1>Same Page Different Stylesheets</h1>
+    <p>
+    <div class="container1">
+      <h2>We recommend ...</h2>
+      <div class="row">
+        <div class="col-xs-4" 
+          ng-repeat="thing in things | orderBy:'rank'">
+          <div class="placement">
+            <h3>{{oneThing.stars}}</h3>
+            <img ng-src="assets/images/{{thing.logo}}" alt="{{thing.title}}">
+            <div class="caption">
+              <h3>{{thing.title}}</h3>
+              <p>{{thing.description}}</p>
+              <p><a ng-href="{{thing.url}}">{{thing.url}}</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </p>
+       <h2>No Styles</h2>
+    <p>
+    stylesheets in the menu, or by selecting one of the following links:<br>
+    <a href="#" ng-click="reStyle(0);">Stylesheet1</a>,
+    <a href="#" ng-click="reStyle(1);">Stylesheet2</a>,
+    <a href="#" ng-click="reStyle(2);">Stylesheet3</a>,
+    <a href="#" ng-click="reStyle(3);">Stylesheet4</a>.
+    <br><a href="#" onclick="noStyles();return false">No Stylesheet</a>.
+    </p>
+   </div>
+    <div id="sidebar">
+      <h3>Side-Bar</h3>
+    <p>
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </p>
+    </div>
+  </div>  
+  
+  <div id="bottom">
+    <div class="container2">
+      <h2>You might also like ...</h2>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="placement">
+            <h3>{{oneThing.stars}}</h3>
+            <img ng-src="assets/images/{{oneThing.logo}}" alt="{{oneThing.title}}">
+            <div class="caption">
+              <h3>{{oneThing.title}}</h3>
+              <p>{{oneThing.description}}</p>
+              <p><a ng-href="{{oneThing.url}}">{{oneThing.url}}</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -27,6 +27,10 @@ angular.module('gulpAngular', ['ngTouch',
         templateUrl: 'components/about/about.html',
         controller: 'AboutController'
       })
+      .when('/layout', {
+        templateUrl: 'components/layout/layout.html',
+        controller: 'LayoutController'
+      })
       .otherwise({
         redirectTo: '/main'
       });
