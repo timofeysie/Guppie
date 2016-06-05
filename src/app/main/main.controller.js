@@ -16,6 +16,18 @@ angular.module('gulpAngular')
     function ($scope, $mdSidenav, $timeout, $log, userInfo) {
     $scope.role = 'visitor';
     userInfo.setRole($scope.role);
+
+    $("#example_id").ionRangeSlider({
+      type: "double",
+      min: 0,
+      max: 10000000,
+      from: 100000,
+      to: 110000,
+      drag_interval: true
+    });
+    var slider = $("#example_id").data("ionRangeSlider");
+    console.log('slider',slider);
+    
     //var vm = this;
 
   /**
